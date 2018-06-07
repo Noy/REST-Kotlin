@@ -14,8 +14,8 @@ data class Hotel(
         val reviews: List<Review>
 )
 
-data class Address(private val city: String, private val country: String)
-data class Review(private val username: String, private val rating: Double) {
+data class Address(val city: String, val country: String)
+data class Review(val username: String, val rating: Double) {
     init {
         if ((rating < 0) || (rating > 10)) {
             throw RatingException("Ratings can only be between 0 and 10")

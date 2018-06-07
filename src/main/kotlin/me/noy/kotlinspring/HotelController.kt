@@ -9,7 +9,7 @@ class HotelController {
 
     @Autowired private lateinit var hotelRepository: HotelRepository
 
-    @GetMapping("all")
+    @GetMapping("/all")
     fun getAllHotels(): List<Hotel> = this.hotelRepository.findAll()
 
     @PutMapping
